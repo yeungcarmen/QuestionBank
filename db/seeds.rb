@@ -3,6 +3,14 @@
  # 2 - think and implement validation (presence) - done
  # 3 - create a test senerio 
 
+SubjectTeacher.destroy_all
+HashtagQuestion.destroy_all
+Hashtag.destroy_all
+Question.destroy_all
+QueType.destroy_all
+Subject.destroy_all
+Teacher.destroy_all
+
 t1 = Teacher.create!(username: "macy", fullname: "Macy Ng", email: "macy.ng@preface.education", password: "123456")
 t2 = Teacher.create!(username: "connie", fullname: "Connie Sze", email: "connie.sze@preface.education", password: "123456")
 t3 = Teacher.create!(username: "edwin", fullname: "Edwin Chiu", email: "edwin.chiu@preface.education", password: "123456")

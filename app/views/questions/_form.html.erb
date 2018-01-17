@@ -1,0 +1,7 @@
+<%= form_for @question do |f| %>
+  <%= f.text_field :statement %>
+  <%= f.text_field :answer %>
+  <%= f.collection_select :subject_id, Subject.all, :id, :name, prompt: true %>
+  <%= f.collection_select :que_type_id, QueType.all, :id, :name, prompt: true %>
+  <%= f.submit "Create" %>
+<% end %>

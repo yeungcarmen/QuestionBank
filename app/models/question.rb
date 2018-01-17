@@ -9,9 +9,13 @@ class Question < ApplicationRecord
 	def self.search_by_hashtag(hashtag_name)
 		h = Hashtag.find_by(name: hashtag_name)
 		results = []
-		HashtagQuestion.where(hashtag_id: h.id).each do |hq|
-			results << hq.question
+
+		if h.present?
+			HashtagQuestion.where(hashtag_id: h.id).each do |hq|
+				results << hq.question
+			end
 		end
+
 		return results
 	end
 end
